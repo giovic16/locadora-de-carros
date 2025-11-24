@@ -6,6 +6,7 @@ import com.br.locadora.service.VeiculosService;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -42,5 +43,10 @@ public class VeiculosController {
     @GetMapping("/caminhao")
     public List<VeiculosModel> buscaPorCaminhao(){
         return veiculosService.exibeCaminhao();
+    }
+
+    @PostMapping("/adiciona-veiculo")
+    public void novoVeiculo(@Parameter int ano, String modelo, String marca, String tipo, String combustivel, boolean disponivel){
+        veiculosService.adicionaVeiculo(ano, modelo, marca, tipo, combustivel, disponivel);
     }
 }

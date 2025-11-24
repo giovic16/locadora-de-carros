@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class VeiculosService {
-  private final VeiculosRepository veiculosRepository;
+    private final VeiculosRepository veiculosRepository;
 
     public List<VeiculosModel> todosVeiculos(){
         return veiculosRepository.findAll();
@@ -30,5 +30,9 @@ public class VeiculosService {
 
     public List<VeiculosModel> exibeCaminhao(){
         return veiculosRepository.findAllByCaminhao();
+    }
+
+    public void adicionaVeiculo(int ano, String modelo, String marca, String tipo, String combustivel, boolean disponivel){
+        veiculosRepository.findAllByAdd(ano, modelo, marca, tipo, combustivel, disponivel);
     }
 }
