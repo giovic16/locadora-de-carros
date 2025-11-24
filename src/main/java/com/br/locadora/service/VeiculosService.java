@@ -15,4 +15,8 @@ public class VeiculosService {
     public List<VeiculosModel> todosVeiculos(){
         return veiculosRepository.findAll();
     }
+
+    public List<VeiculosModel> veiculoPorId(int id) {
+        return veiculosRepository.findAllById(id);
+    }
 }

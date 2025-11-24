@@ -12,4 +12,5 @@ public interface VeiculosRepository extends JpaRepository<VeiculosModel, Long> {
 
     List<VeiculosModel> findAll();
 
+    List<VeiculosModel> findAllById(int id);
 }
