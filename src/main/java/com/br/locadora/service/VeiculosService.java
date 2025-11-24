@@ -21,6 +21,14 @@ public class VeiculosService {
     }
 
     public List<VeiculosModel> exibeCarro(){
-        return veiculosRepository.findAllByTipo();
+        return veiculosRepository.findAllByCarro();
+    }
+
+    public List<VeiculosModel> exibeMoto(){
+        return veiculosRepository.findAllByMoto();
+    }
+
+    public List<VeiculosModel> exibeCaminhao(){
+        return veiculosRepository.findAllByCaminhao();
     }
 }

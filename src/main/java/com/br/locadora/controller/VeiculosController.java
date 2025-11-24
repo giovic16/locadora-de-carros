@@ -33,4 +33,14 @@ public class VeiculosController {
     public List<VeiculosModel> buscaPorCarro(){
         return veiculosService.exibeCarro();
     }
+
+    @GetMapping("/moto")
+    public List<VeiculosModel> buscaPorMoto(){
+        return veiculosService.exibeMoto();
+    }
+
+    @GetMapping("/caminhao")
+    public List<VeiculosModel> buscaPorCaminhao(){
+        return veiculosService.exibeCaminhao();
+    }
 }

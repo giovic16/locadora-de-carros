@@ -17,5 +17,9 @@ public interface VeiculosRepository extends JpaRepository<VeiculosModel, Long> {
 
     List<VeiculosModel> findAllById(int id);
 
-    @Query(value = "select v from VeiculosModel v where v.tipo = 'carro' ") List<VeiculosModel> findAllByTipo();
+    @Query(value = "select v from VeiculosModel v where v.tipo = 'carro' ") List<VeiculosModel> findAllByCarro();
+
+    @Query(value = "select v from VeiculosModel v where v.tipo = 'moto' ") List<VeiculosModel> findAllByMoto();
+
+    @Query(value = "select v from VeiculosModel v where v.tipo = 'Caminhão' ") List<VeiculosModel> findAllByCaminhao();
 }
