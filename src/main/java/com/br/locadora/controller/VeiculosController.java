@@ -28,4 +28,9 @@ public class VeiculosController {
     public List<VeiculosModel> buscaPorId(@Parameter int id) {
         return veiculosService.veiculoPorId(id);
     }
+
+    @GetMapping("/carro")
+    public List<VeiculosModel> buscaPorCarro(){
+        return veiculosService.exibeCarro();
+    }
 }
