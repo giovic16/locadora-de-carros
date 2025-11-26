@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static org.apache.catalina.security.SecurityUtil.remove;
+
 @Service
 @RequiredArgsConstructor
 public class VeiculosService {
@@ -34,5 +36,9 @@ public class VeiculosService {
 
     public void adicionaVeiculo(int ano, String modelo, String marca, String tipo, String combustivel, boolean disponivel){
         veiculosRepository.findAllByAdd(ano, modelo, marca, tipo, combustivel, disponivel);
+    }
+
+    public void removeVeiculo(int id){
+        veiculosRepository.deleteByIdCustom(id);
     }
 }
