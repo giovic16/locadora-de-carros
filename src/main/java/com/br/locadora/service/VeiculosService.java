@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static org.apache.catalina.security.SecurityUtil.remove;
 
 @Service
 @RequiredArgsConstructor

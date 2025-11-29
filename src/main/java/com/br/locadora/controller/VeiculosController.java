@@ -1,6 +1,5 @@
 package com.br.locadora.controller;
 
-import com.br.locadora.dto.VeiculosDto;
 import com.br.locadora.model.VeiculosModel;
 import com.br.locadora.service.VeiculosService;
 import io.swagger.v3.oas.annotations.Parameter;
